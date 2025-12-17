@@ -1,0 +1,65 @@
+.careersHeader {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.cultureSection {
+    margin-top: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.cultureCard {
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-subtle);
+}
+
+.cultureTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.jobList {
+    margin-top: var(--spacing-lg);
+}
+
+.jobItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--spacing-md) 0;
+}
+
+.jobTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.jobMeta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.applyButton {
+    border: 1px solid var(--text-primary);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.applyButton:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}

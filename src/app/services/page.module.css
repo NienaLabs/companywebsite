@@ -1,0 +1,113 @@
+.servicesHeader {
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+}
+
+.serviceList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.serviceItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    min-height: 280px;
+}
+
+.serviceItem:hover {
+    border-color: var(--brand-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px -10px rgba(124, 92, 255, 0.15);
+}
+
+.serviceTitle {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.serviceDesc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.serviceLink {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s ease;
+}
+
+.serviceItem:hover .serviceLink {
+    color: var(--brand-primary);
+    gap: 0.8rem;
+}
+
+/* Specific Services Detail Page Styles */
+.detailHeader {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Detail pages wrap content in .container themselves, but let's constrain width */
+.detailHeaderContent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.detailTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.detailContent {
+    padding: var(--spacing-xl) 0;
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 900px) {
+    .serviceList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detailContent {
+        grid-template-columns: 2fr 1fr;
+    }
+}
