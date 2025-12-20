@@ -9,8 +9,7 @@ const Footer = () => {
                 <div className={styles.top}>
                     <div className={styles.brand}>
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', gap: '12px' }}>
-                            <Image src="/logo.png" alt="Niena Labs Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
-                            <div className={styles.logo}>Niena Labs</div>
+                            <Image src="/company_logo.png" alt="Niena Labs Logo" width={280} height={50} style={{ objectFit: 'contain' }} />
                         </div>
                         <p className={styles.tagline}>
                             Engineering complex systems for the future.

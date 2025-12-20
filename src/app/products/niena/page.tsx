@@ -21,7 +21,7 @@ export default function NienaProductPage() {
                         Niena.
                     </h1>
                     <p className={styles.intro} style={{ margin: '0', maxWidth: '700px', fontSize: '1.75rem', lineHeight: 1.4 }}>
-                        The unfair advantage for your job search.
+                        The unfair advantage for achieving your career goals.
                     </p>
                 </FadeIn>
             </section>
@@ -67,7 +67,7 @@ export default function NienaProductPage() {
                             <div style={{ minWidth: '30px', height: '30px', borderRadius: '50%', background: 'var(--brand-gradient)', marginTop: '0.25rem' }}></div>
                             <div>
                                 <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Personalized AI Agent</h4>
-                                <p className="text-body">Niena doesn&apos;t just check grammar. She understands your career history and speaks to your specific strengths.</p>
+                                <p className="text-body">Niena&apos;s interview AI doesn&apos;t just check grammar. It understands your career history and speaks to your specific strengths.</p>
                             </div>
                         </li>
                         <li style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
@@ -90,7 +90,7 @@ export default function NienaProductPage() {
                             We use RAG (Retrieval-Augmented Generation) pipelines to ground our AI in your actual data, ensuring zero hallucinations about your work history.
                         </p>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                            {['RAG Pipeline', 'OpenAI GPT-4o', 'Vector Embeddings', 'Next.js 14', 'Edge Runtime'].map(tag => (
+                            {['RAG Pipeline', 'OpenAI GPT-4o', 'Vector Embeddings', 'Next.js 16', 'Edge Runtime','TRPC','Tavus'].map(tag => (
                                 <span key={tag} style={{
                                     padding: '0.4rem 0.8rem',
                                     background: 'rgba(255,255,255,0.05)',
@@ -139,26 +139,6 @@ export default function NienaProductPage() {
                 </FadeIn>
             </section>
 
-            {/* 6. Roadmap */}
-            <section className="section">
-                <FadeIn delay={0.5}>
-                    <h2 className="text-title" style={{ marginBottom: '2rem' }}>Roadmap</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
-                        <div>
-                            <strong style={{ display: 'block', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Q2 2024</strong>
-                            <p className="text-small">Mobile App Launch</p>
-                        </div>
-                        <div>
-                            <strong style={{ display: 'block', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Q3 2024</strong>
-                            <p className="text-small">LinkedIn Auto-Apply Agent</p>
-                        </div>
-                        <div>
-                            <strong style={{ display: 'block', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Q4 2024</strong>
-                            <p className="text-small">Enterprise API for Recruiters</p>
-                        </div>
-                    </div>
-                </FadeIn>
-            </section>
 
             {/* 7. CTA (Use / Contribute) */}
             <section className="section" style={{ textAlign: 'center', padding: '6rem 0', borderTop: '1px solid var(--border-subtle)' }}>
