@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
-import { ArrowRight, Code2, Cpu, Globe, Rocket, ShieldCheck, Zap, Layers } from 'lucide-react';
+import { ArrowRight, Code2, Cpu, Globe, Rocket,Building, ShieldCheck, Zap, Layers } from 'lucide-react';
+import WaterRipple from '@/components/WaterRipple';
 
 export default function Home() {
   return (
     <div className="container">
       {/* 1. Hero */}
       <section className={styles.hero}>
+        <WaterRipple />
         <FadeIn delay={0.1}>
           <h1 className={styles.heroTitle}>
             We build software for the problems that actually matter.
@@ -38,7 +40,7 @@ export default function Home() {
             <div className={styles.card}>
               <div style={{ marginBottom: '1rem', color: 'var(--brand-primary)' }}><Code2 size={32} /></div>
               <div>
-                <h3 className={styles.cardTitle}>Engineering Services</h3>
+                <h3 className={styles.cardTitle}>Software Engineering Services</h3>
                 <p className={styles.cardText}>
                   We build the heavy lifting stuff. Scalable platforms, internal tools, and systems that don&apos;t break when you scale.
                 </p>
@@ -54,7 +56,7 @@ export default function Home() {
               <div>
                 <h3 className={styles.cardTitle}>Products & Tools</h3>
                 <p className={styles.cardText}>
-                  We build our own tools to solve our own headaches. Then we release them to you.
+                  We build tools to solve headaches. Then we release them to you.
                 </p>
               </div>
               <Link href="/products" className="text-small hover-underline" style={{ marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -68,7 +70,7 @@ export default function Home() {
               <div>
                 <h3 className={styles.cardTitle}>Open-Source</h3>
                 <p className={styles.cardText}>
-                  We give back. Robust libraries and utilities that move the engineering community forward.
+                  We give back. Robust libraries and utilities that move the developer community forward.
                 </p>
               </div>
               <Link href="/open-source" className="text-small hover-underline" style={{ marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -82,7 +84,7 @@ export default function Home() {
               <div>
                 <h3 className={styles.cardTitle}>Research & Low-Level</h3>
                 <p className={styles.cardText}>
-                  We like the hard stuff. Deep-dive explorations into systems, compilers, and AI.
+                  We do research on low-level systems, compilers, AI and improve Open-source tools.
                 </p>
               </div>
               <Link href="/experiments" className="text-small hover-underline" style={{ marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -100,7 +102,9 @@ export default function Home() {
             <FadeIn>
               <h2 className="text-title">Problems We Solve.</h2>
               <p className="text-body" style={{ marginTop: '1rem', maxWidth: '500px' }}>
-                We don&apos;t chase trends. You won&apos;t see us pivoting to the &quot;Next Big Thing&quot; every week. We tackle the boring, difficult obstacles that keep businesses from growing.
+                We solve all kinds of problems as long as they change the world. We tackle the boring, difficult obstacles that keep businesses from growing.
+                Want to solve a software problem in your business or start a new project for your business?
+                Reach out to us.   
               </p>
             </FadeIn>
           </div>
@@ -154,10 +158,12 @@ export default function Home() {
         </FadeIn>
         <div className={styles.grid}>
           {[
-            { icon: <Globe size={28} />, title: 'Web & Mobile', text: 'Full-stack apps that feel native. React, Next.js, and Node.js.' },
-            { icon: <Cpu size={28} />, title: 'AI & ML', text: 'Real intelligence, not just buzzwords. Integrating models into real workflows.' },
-            { icon: <Code2 size={28} />, title: 'Systems Engineering', text: 'Low-level code for when speed matters more than anything else.' },
-            { icon: <Layers size={28} />, title: 'Infrastructure', text: 'Cloud architecture that scales with you, not against you.' }
+            { icon: <Globe size={28} />, title: 'Web & Mobile', text: 'Modern Full-stack apps that feel native.' },
+            { icon: <Cpu size={28} />, title: 'AI & ML', text: 'Reccommendation systems, chatbots,facial recognition systems and more.Integrating models into real workflows.' },
+            { icon: <Code2 size={28} />, title: 'Low Level Code', text: 'Low-level code for when speed matters more than anything else.' },
+            { icon: <Layers size={28} />, title: 'Infrastructure', text: 'Cloud architecture and microservices that scales with you.' },
+            { icon: <Building size={28} />, title: 'Internal Organization and Business Applications', text: 'Replacing legacy systems with more modern applications in organizations or new internal applications' },
+          
           ].map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.1}>
               <div className={styles.card}>
@@ -211,8 +217,9 @@ export default function Home() {
           <div className={styles.philosophy}>
             <h2 className="text-title">Our Philosophy.</h2>
             <p className={styles.philosophyText}>
-              We believe in code that lasts. We don&apos;t just ship features; we build foundations.
-              If you&apos;re looking for quick hacks, we&apos;re not the right fit.
+              We believe the world can be changed the way we found it. Every product we build has one
+              purpose: to push humanity forward.If you believe your idea could make huge impact to the
+              world and you&apos;re ready to build it but don&apos;t know where to start,reach out to us.
             </p>
           </div>
         </FadeIn>
@@ -221,7 +228,7 @@ export default function Home() {
       {/* 8. Final CTA */}
       <section className={styles.ctaSection}>
         <FadeIn>
-          <h2 className={styles.ctaTitle}>Let’s build something real.</h2>
+          <h2 className={styles.ctaTitle}>Let&apos;s build something real and change the world together.</h2>
           <Link href="/contact" className={styles.primaryButton}>
             Start a Conversation
           </Link>
