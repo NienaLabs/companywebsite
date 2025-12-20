@@ -18,10 +18,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: 'Niena Labs | Software Engineering & Problem Solving',
-  description: 'We are a software engineering company and problem-solving company, focused on complex challenges, scalability, and deep systems.',
-  icons: {
-    icon: '/favicon.ico',
-  },
+  description: 'We are a software engineering company and problem-solving company, focused on complex challenges, scalability, and deep systems.'
 };
 
 export default function RootLayout({
