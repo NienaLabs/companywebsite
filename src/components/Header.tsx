@@ -16,7 +16,8 @@ const Header = () => {
             // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsOpen(false);
         }
-    }, [pathname, isOpen]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname]);
 
     // Prevent scroll when menu is open
     useEffect(() => {
@@ -50,7 +51,7 @@ const Header = () => {
                 <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
                     <Link href="/services" className={styles.link}>Services</Link>
                     <Link href="/products" className={styles.link}>Products</Link>
-                    <Link href="/open-source" className={styles.link}>Open Source</Link>
+                    {/* <Link href="/open-source" className={styles.link}>Open Source</Link> */}
                     <Link href="/about" className={styles.link}>About</Link>
                     <Link href="/careers" className={styles.link}>Careers</Link>
                     <Link href="/contact" className={styles.cta}>Work With Us</Link>

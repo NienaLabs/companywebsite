@@ -62,7 +62,7 @@ export default function Home() {
               </Link>
             </div>
           </FadeIn>
-          <FadeIn delay={0.3}>
+          {/* <FadeIn delay={0.3}>
             <div className={styles.card}>
               <div style={{ marginBottom: '1rem', color: 'var(--brand-primary)' }}><Globe size={32} /></div>
               <div>
@@ -75,7 +75,7 @@ export default function Home() {
                 Explore Code <ArrowRight size={16} />
               </Link>
             </div>
-          </FadeIn>
+          </FadeIn> */}
           <FadeIn delay={0.4}>
             <div className={styles.card}>
               <div style={{ marginBottom: '1rem', color: 'var(--brand-primary)' }}><Cpu size={32} /></div>

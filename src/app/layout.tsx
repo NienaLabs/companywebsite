@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter, Manrope } from 'next/font/google';
+import { Outfit, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
 });
 
-const manrope = Manrope({
+const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-heading',
   display: 'swap',
@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${manrope.variable}`}>
+      <body className={`${dmSans.variable} ${outfit.variable}`}>
         <Header />
         <main style={{ minHeight: '100vh', paddingTop: '80px' }}>{children}</main>
         <Footer />

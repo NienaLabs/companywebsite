@@ -219,7 +219,30 @@
   }
 
   .heroTitle {
-    font-size: 3rem;
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+    text-align: left;
+  }
+
+  .hero {
+    min-height: 70dvh;
+    padding-top: 120px;
+    padding-bottom: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .grid {
