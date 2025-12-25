@@ -32,10 +32,10 @@ const Header = () => {
         <header className={`${styles.header} ${isOpen ? styles.open : ''}`}>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo}>
-                    <div style={{ position: 'relative', width: '32px', height: '32px', marginRight: '12px' }}>
-                        <Image src="/logo.png" alt="Niena Labs Logo" width={32} height={32} style={{ objectFit: 'contain' }} />
+                    <div style={{ position: 'relative'}}>
+                        <Image src="/company_logo.png" alt="Niena Labs Logo" width={280} height={40} style={{ objectFit: 'contain' }} />
                     </div>
-                    <span>Niena Labs</span>
+                    
                 </Link>
 
                 {/* Mobile Toggle Button */}

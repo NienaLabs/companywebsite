@@ -9,11 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@types/three": "^0.182.0",
+    "gsap": "^3.14.2",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+<<<<<<< HEAD
     "resend": "^6.6.0"
+=======
+    "three": "^0.182.0"
+>>>>>>> e5149473645909414afca5b30b91ee064e4d020d
   },
   "devDependencies": {
     "@types/node": "^20",

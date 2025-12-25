@@ -15,7 +15,7 @@ export default function AboutPage() {
                 <h1 className={styles.title}>Identity, Not Marketing.</h1>
                 <p className={styles.intro}>
                     Niena Labs exists because software is often built for the short term. We build for the long haul.
-                    We are a team of engineers, researchers, and problem solvers who care about depth, reliability, and correctness.
+                    We are a team of engineers, researchers, and problem solvers who care about depth, reliability ,correctness with one idea,change the world and make sure you don&apos;t leave it the way you found it.
                 </p>
 
                 <h2 className="text-title" style={{ marginTop: '4rem' }}>Who We Are</h2>
@@ -50,8 +50,8 @@ export default function AboutPage() {
                 <div className={styles.vision}>
                     <h2 className="text-title" style={{ marginBottom: '1rem' }}>Long-Term Vision</h2>
                     <p className="text-body">
-                        To become a laboratory where the world&apos;s hardest software problems are solved.
-                        We aim to bridge the gap between academic research and industrial application, creating tools and systems that define the future of engineering.
+                        To become a company where the world&apos;s hardest software problems are solved.
+                        We aim to bridge the gap between academic research and industrial application, creating tools and systems that define the future of software engineering and change humanity as we see it.
                     </p>
                 </div>
 
