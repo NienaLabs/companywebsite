@@ -1,12 +1,49 @@
-import styles from './page.module.css';
-import { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-    title: 'Start a Project | Niena Labs',
-    description: 'Tell us about your engineering challenge.',
-};
+import styles from './page.module.css';
+import { sendContactEmail } from '@/app/actions/contact';
+import { useState } from 'react';
 
 export default function ContactPage() {
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    async function handleSubmit(formData: FormData) {
+        setStatus('submitting');
+        setErrorMessage('');
+
+        const result = await sendContactEmail(formData);
+
+        if (result.error) {
+            setStatus('error');
+            setErrorMessage(result.error);
+        } else {
+            setStatus('success');
+        }
+    }
+
+    if (status === 'success') {
+        return (
+            <div className="container">
+                <div className={styles.contactContainer}>
+                    <div className={styles.successMessage}>
+                        <h1 className={styles.title}>Request Received</h1>
+                        <p className={styles.subtitle}>
+                            Thanks for reaching out. We&apos;ve received your request and an engineer will review it shortly.
+                        </p>
+                        <button
+                            onClick={() => setStatus('idle')}
+                            className={styles.secondaryButton}
+                            style={{ marginTop: '2rem' }}
+                        >
+                            Send Another Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="container">
             <div className={styles.contactContainer}>
@@ -17,7 +54,7 @@ export default function ContactPage() {
                     </p>
                 </div>
 
-                <form className={styles.form}>
+                <form action={handleSubmit} className={styles.form}>
                     <div className={styles.formGroup}>
                         <label htmlFor="name" className={styles.label}>Name / Company</label>
                         <input type="text" id="name" name="name" className={styles.input} placeholder="Enter your name or company" required />
@@ -50,7 +87,17 @@ export default function ContactPage() {
                         <textarea id="description" name="description" className={styles.textarea} placeholder="Describe the core problem, technical constraints, and goals..." required></textarea>
                     </div>
 
-                    <button type="submit" className={styles.submitButton}>Initiate Request</button>
+                    {status === 'error' && (
+                        <p className={styles.errorText}>{errorMessage}</p>
+                    )}
+
+                    <button
+                        type="submit"
+                        className={styles.submitButton}
+                        disabled={status === 'submitting'}
+                    >
+                        {status === 'submitting' ? 'Sending...' : 'Initiate Request'}
+                    </button>
 
                     <p className={styles.note}>
                         By submitting, you agree to our Privacy Policy. We treat all project details as confidential.

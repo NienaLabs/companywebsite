@@ -27,7 +27,7 @@ const Footer = () => {
                             <h4>Work</h4>
                             <Link href="/services">Services</Link>
                             <Link href="/products">Products</Link>
-                            <Link href="/open-source">Open Source</Link>
+                            {/* <Link href="/open-source">Open Source</Link> */}
                         </div>
                         <div className={styles.column}>
                             <h4>Legal</h4>
