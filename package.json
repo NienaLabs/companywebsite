@@ -16,11 +16,8 @@
     "next": "16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-<<<<<<< HEAD
-    "resend": "^6.6.0"
-=======
+    "resend": "^6.6.0",
     "three": "^0.182.0"
->>>>>>> e5149473645909414afca5b30b91ee064e4d020d
   },
   "devDependencies": {
     "@types/node": "^20",
