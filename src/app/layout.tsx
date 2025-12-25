@@ -1,18 +1,12 @@
 import type { Metadata } from 'next';
-import { Outfit, DM_Sans } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const dmSans = DM_Sans({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-});
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-jakarta',
   display: 'swap',
 });
 
@@ -28,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${outfit.variable}`}>
+      <body className={jakarta.variable}>
         <Header />
         <main style={{ minHeight: '100vh', paddingTop: '80px' }}>{children}</main>
         <Footer />
